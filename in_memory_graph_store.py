@@ -30,12 +30,4 @@ class InMemoryGraphStore:
                 neighbors.append((rel, tgt))
         return neighbors
 
-    def find_seed_nodes(graph_store, query: str):
-        query_lower = query.lower()
-        seeds = []
-
-        for node in graph_store.nodes.values():
-            if node["name"].lower() in query_lower:
-                seeds.append(node["id"])
-
-        return seeds
+    
